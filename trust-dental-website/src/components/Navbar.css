@@ -1,0 +1,129 @@
+/* src/components/Navbar.css */
+
+/* Top Bar Styling */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: orange;
+  padding: 5px 20px;
+  font-size: 14px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.top-bar-left p,
+.top-bar-right p {
+  margin: 0;
+  color: #333;
+}
+
+.top-bar-left {
+  text-align: left;
+}
+
+.top-bar-right {
+  text-align: right;
+}
+
+/* Navbar styling */
+.navbar {
+  padding: 10px 20px;
+  background-color: white;
+  position: fixed;
+  top: 35px;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Ensure content doesn't overlap with fixed navbar */
+body {
+  padding-top: 100px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 30px; /* Increase spacing between each menu item */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem; /* Increase the font size */
+  padding: 10px 20px; /* Increase the padding */
+  color: #333;
+  font-weight: 600; /* Make the font slightly bolder */
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff; /* Change color on hover */
+  border-bottom: 2px solid #007bff; /* Add a bottom border on hover */
+}
+
+/* Enquire button styling */
+.nav-link.enquire {
+  background-color: orange;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.nav-link.enquire:hover {
+  background-color: #e69500; /* Slightly darker orange on hover */
+}
+
+/* Top bar and navbar responsiveness */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .top-bar-left,
+  .top-bar-right {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .navbar {
+    top: 70px;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+
+  .nav-link.enquire {
+    padding: 8px 15px;
+    font-size: 1rem;
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 15px;
+  }
+}
